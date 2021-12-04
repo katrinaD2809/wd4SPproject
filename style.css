@@ -1,6 +1,6 @@
 body {
     background-color: #b7e4c7ff;
-    margin: 20;
+    margin: 20px;
     padding-bottom: 10px;
     text-align: center;
 }
@@ -37,52 +37,126 @@ h1 {
 
 /* NAV STYLING */
 
-navbar-nav {
+.navbar-nav {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
     color: var(--color-five) !important;
+    margin: 15px;
+    border: 10px;
+    padding: 20px;
 }
 
 nav a:hover,
 nav a:focus {
-    color: #036;
-    background-color: #fff;
+    color: var(--color-three);
+    background-color: var(--color-two);
     text-decoration: underline;
 }
 
 nav a:active {
-    color: #fff;
-    background-color: #024;
+    color: var(--color-one);
+    background-color: var(--color-five);
     text-decoration: underline;
 }
 
-/* nav [aria-current=page] {
-	background-color: var(--color-one) !important;
-	color: var(--color-two) !important;
-	border-bottom: .25em solid var(--color-three) !important;
-} */
+nav [aria-current=page] {
+    background-color: #bbb;
+    color: #000;
+    border-bottom: .25em solid #444;
+}
 
 .container-fluid {
     font-family: Verdana, Geneva, Tahoma, sans-serif !important;
     color: var(--color-four) !important;
+    margin: 3px;
+    border: 5px;
+    padding-top: 5px;
 }
 
 
 /* PAGE 1 HOME STYLING */
 /* CARD STYLING */
+.card {
+    margin: 5px;
+    border: 15px;
+    padding: 30px;
+}
+
 .card-title {
     font-size: xx-large !important;
     color: var(--color-three) !important;
+    margin: 5px;
+    border: 15px;
+    padding: 15px;
 }
 
 .card-text {
     color: var(--color-four);
 }
 
+/* bootstrap button animation */
+
+.btn {
+    display: flex;
+    border-radius: 4px;
+    background-color: var(--color-four);
+    color: #FFFFFF;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    border: 8px;
+    padding: 20px;
+}
+
+.btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.btn:hover span {
+    padding-right: 25px;
+}
+
+.btn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+
 /* PAGE 2 STYLING */
 .blockquote {
     color: var(--color-four);
     font-family: 'Times New Roman', Times, serif;
-    font-size: large;
+    font-size: 30px;
+    margin: 5px;
+    border: 8px;
+    padding: 8px;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    margin: 15px;
+    border: 25px;
+    padding: 35px;
+}
+
+.svgOne {
+    margin: 5px;
+    border: 5px;
 }
 
 /* PAGE 3 STYLING */
@@ -126,7 +200,7 @@ input:valid {
 }
 
 input:invalid {
-    border-color: 2px dashed rgb(255, 30, 135);
+    border-color: red;
 }
 
 input[type=submit] {
@@ -161,16 +235,20 @@ hr.dotted {
 /* .container .bg-primary {
     background-color: var(--color-two) !important;
 } */
-.container .bg-light {
+.page4 .container .bg-light {
     background-color: var(--color-three) !important;
     color: var(--color-six) !important;
+    width: 100%;
+    border: 19px;
+    margin: 12px;
+    padding: 40px;
 }
 
 /* animation */
 .anime {
     width: 100px;
     height: 100px;
-    border-radius: var(--color-five) 10px;
+    border-radius: 10px;
     background: var(--color-four);
     position: relative;
     animation: anime 5s infinite;
@@ -188,11 +266,4 @@ hr.dotted {
     to {
         left: 200px;
     }
-}
-
-/* footer nav */
-#footer-nav {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: small;
-    color: var(--color-one);
 }
